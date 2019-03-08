@@ -72,7 +72,7 @@ inner join payments on customers.customerNumber = payments.customerNumber
 The executionplan for query B:
 ![Eplan3B](https://github.com/cph-js284/Assignment6Database/blob/master/ressources/ExecutionPlan_window.png)
 
-*Not sure what's going on here I was under the impression that windowing would be cheaper - I Even tried slimming the windowed query down futher, but as the image shows that only brings it to 273, which is still more expensive*
+*Not sure what's going on here I was under the impression that windowing would be cheaper - I Even tried slimming the windowed query down futher, but as the image shows that only brings it to 273, which is still more expensive*<br>
 Query B (alternativ - using the DISTINCT in the SELECT-statement)<br>
 ![Eplan3B_alternativ](https://github.com/cph-js284/Assignment6Database/blob/master/ressources/Excercise3_window_v2_273.png)
 
