@@ -38,7 +38,7 @@ ADD INDEX `CustCityInx` (`city` ASC) VISIBLE;
 ;
 ```
 These scripts adds an index on the city-columns in the offices and customers tables<br>
-The executionplan below documents the increase in performance; *the cost to perform the query is lower(fewer bananas)*
+The executionplan below documents the increase in performance; *the cost to perform the query is lower(fewer bananas)*<br>
 
 ![Eplan2_optimized](https://github.com/cph-js284/Assignment6Database/blob/master/ressources/ExecutionPlanOptimized.png)
 
@@ -69,7 +69,7 @@ inner join employees on offices.officeCode = employees.officeCode
 inner join customers on employees.employeeNumber = customers.salesRepEmployeeNumber
 inner join payments on customers.customerNumber = payments.customerNumber
 ````
-The executionplan for query B:
+The executionplan for query B:<br>
 ![Eplan3B](https://github.com/cph-js284/Assignment6Database/blob/master/ressources/ExecutionPlan_window.png)
 
 *Not sure what's going on here I was under the impression that windowing would be cheaper - I even tried slimming the windowed query down futher, but as the image shows that only brings it to 273, which is still more expensive*<br>
@@ -118,7 +118,7 @@ against ('grounds' in boolean mode)
 ```
 *If you were to run this using a natual language search, you would simply replace the boolean keyword. Running the query in boolean mode enables the usage of special characters in the query*
 
-The executionplan clearly shows the difference - by roughly a factor of 350.
+The executionplan clearly shows the difference - by roughly a factor of 350.<br>
 ![Eplan5](https://github.com/cph-js284/Assignment6Database/blob/master/ressources/ExecutionPlan_withFullTextIdx.png)
 
 
