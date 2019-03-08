@@ -72,7 +72,7 @@ inner join payments on customers.customerNumber = payments.customerNumber
 The executionplan for query B:
 ![Eplan3B](https://github.com/cph-js284/Assignment6Database/blob/master/ressources/ExecutionPlan_window.png)
 
-*Not sure what's going on here I was under the impression that windowing would be cheaper - I Even tried slimming the windowed query down futher, but as the image shows that only brings it to 273, which is still more expensive*<br>
+*Not sure what's going on here I was under the impression that windowing would be cheaper - I even tried slimming the windowed query down futher, but as the image shows that only brings it to 273, which is still more expensive*<br>
 Query B (alternativ - using the DISTINCT in the SELECT-statement)<br>
 ![Eplan3B_alternativ](https://github.com/cph-js284/Assignment6Database/blob/master/ressources/Excercise3_window_v2_273.png)
 
@@ -85,7 +85,7 @@ from posts
 inner join users on posts.OwnerUserId = users.Id
 where posts.Title like '%grounds%'
 ````
-The executionplan:
+The executionplan:<br>
 ![Eplan4](https://github.com/cph-js284/Assignment6Database/blob/master/ressources/ExecutionPlan_withjoin.png)
 
 *To document the cost on the join, we remove the join and use the OwnerUserId instead to identify the users*
@@ -94,21 +94,21 @@ select posts.Title, posts.OwnerUserId
 from posts
 where posts.Title like '%grounds%'
 ```
-The executionplan without the join:
+The executionplan without the join:<br>
 ![Eplan4](https://github.com/cph-js284/Assignment6Database/blob/master/ressources/ExecutionPlan_nojoin.png)
 
 The difference in cost between the two plans are negligible
 
 ---------------------------------------------------------------------------------------------------------------------
 # Excercise 5
-*Add a full text index to the posts table and change the query from exercise 4 so it no longer scans the entire posts table.*
-To add the fullTextIndex the following statement is excuted:
+*Add a full text index to the posts table and change the query from exercise 4 so it no longer scans the entire posts table.*<br>
+To add the fullTextIndex the following statement is executed:
 ```
 ALTER TABLE `stackoverflow`.`posts` 
 ADD FULLTEXT INDEX `title_idx` (`Title`) VISIBLE;
 ;
 ```
-To make use of the fullTextIndex the following statement is excuted:
+To make use of the fullTextIndex the following statement is executed:
 *(this is the query from Ex4 without the join)*
 ```
 select posts.Title, posts.OwnerUserId
