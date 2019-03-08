@@ -21,9 +21,9 @@ inner join employees on employees.employeeNumber = customers.salesRepEmployeeNum
 inner join offices on offices.officeCode = employees.officeCode
 where customers.city = offices.city;
 ```
-As documented in the image below, the main problem with this query is the *full table scan* performed on the offices table
+As documented in the image below, the main problem with this query is the *full table scan* performed on the offices table<br>
 
-
+https://github.com/cph-js284/Assignment6Database/blob/master/ressources/ExecutionPlan.png
 
 
 
