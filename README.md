@@ -25,7 +25,9 @@ As documented in the image below, the main problem with this query is the *full 
 
 ![Eplan1](https://github.com/cph-js284/Assignment6Database/blob/master/ressources/ExecutionPlan.png)
 
-
+----------------------------------------------------------------------------------------------------------------------
+# Excercise 2
+*Change the database schema so that the query from exercise get better performance.*
 
 
 ----------------------------------------------------------------------------------------------------------------------
