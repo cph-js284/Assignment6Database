@@ -118,8 +118,8 @@ against ('grounds' in boolean mode)
 ```
 *If you were to run this using a natual language search, you would simply replace the boolean keyword. Running the query in boolean mode enables the usage of special characters in the query*
 
-The executionplan clearly shows the difference 
-![Eplan4](https://github.com/cph-js284/Assignment6Database/blob/master/ressources/ExecutionPlan_withFullTextIdx.png)
+The executionplan clearly shows the difference - by roughly a factor of 350.
+![Eplan5](https://github.com/cph-js284/Assignment6Database/blob/master/ressources/ExecutionPlan_withFullTextIdx.png)
 
 
 ----------------------------------------------------------------------------------------------------------------------
