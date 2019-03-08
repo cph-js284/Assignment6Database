@@ -23,7 +23,7 @@ where customers.city = offices.city;
 ```
 As documented in the image below, the main problem with this query is the *full table scan* performed on the offices table<br>
 
-https://github.com/cph-js284/Assignment6Database/blob/master/ressources/ExecutionPlan.png
+![Eplan1](https://github.com/cph-js284/Assignment6Database/blob/master/ressources/ExecutionPlan.png)
 
 
 
